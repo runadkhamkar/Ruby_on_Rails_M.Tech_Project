@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<ul><li><%= link_to 'Back', '/medical' %></li>
+  <li><%= link_to 'Download', download_url(@business) %></li>
+</ul>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @business.customer_id %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @business.address %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <% shop=Shop.where(id:@business.shop_id) %>
+  <% shop.each do |s|%>
+  <% d=s.distance_from([@business.latitude,@business.longitude],:km)%>
+  <%=d %> km
+  <% end %>
+
+</p>
+
+
+<p>
+  <strong>Status:</strong>
+  <%= @business.status %>
+</p>
+
+
+
+  <p>
+    <strong>Prescription:</strong>
+  <% if @business.image.attached? %>
+    <%= image_tag(@business.image, style:'width:70%') %>
+    <%= @op %>
+    <% end%>
+
+  </p>

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<li style="float:right;"><%= link_to "Sign out", '/' %></li>
+
+<h1>Businesses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Status</th>
+      <th>Customer ID</th>
+      <th>Shop ID</th>
+
+      
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @business.each do |business| %>
+      <tr>
+        <td><%= business.address %></td>
+        <td><%= business.status %></td>
+        <td><%= business.customer_id %></td>
+        <td><%= business.shop_id %></td>
+        
+        
+        
+
+        <% session[:business_id]=business.id %>
+        <td><%= link_to "Take action",show2_url(business.id)%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

@@ -1,0 +1,27 @@
+<h1>Medical Shop</h1>
+
+<center><h1>Login</h1>
+<form action="/sessions" method="POST">
+	<input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
+	<input type="email" name="login[email]" placeholder="email"><br>
+	<input type="password" name="login[password]" placeholder="password"><br>
+	<input type="submit" name="submit" class="submit">
+	
+
+</form>
+
+<h1>Registration</h1>
+<form action="/shop" method="POST">
+	<input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
+	<input type="email" name="shop[email]" placeholder="email"><br>
+	<input type="password" name="shop[password]" placeholder="password"><br>
+	<input type="password" name="shop[password_confirmation]" placeholder="password_confirmation"><br>
+	<input type="text" name="shop[username]" placeholder="username"><br>
+	<input type="text" name="shop[shopid]" placeholder="shopid"><br>
+	<input type="text" name="shop[address]" placeholder="address"><br>
+	<input type="text" name="shop[contact]" placeholder="contact"><br>
+	<input type="submit" name="submit" class="submit">
+	
+
+</form>
+</center>

@@ -1,0 +1,11 @@
+<h1>You customer id is:<%= session[:customer_id] %></h1>
+
+<h1>place order</h1>
+<form action="/save_order" method="POST">
+  <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
+  <input type="string" name="address" placeholder="Address"><br>
+  <input type="file" name="image"><br>
+  <input type="submit" name="submit" class="submit">
+  
+
+</form>

@@ -1,0 +1,21 @@
+<h2>Enter how many request you can fulfil in given prescription:</h2>
+<center>
+  <% if business.image.attached? %>
+    <%= image_tag(business.image, style:'width:40%') %>
+    <% end%>
+<%= form_with(model: business, local: true) do |form| %>
+  
+  
+
+  <div class="field">
+    <%= form.label :answer %>
+    <%= form.text_field :status %>
+  </div>
+
+  
+
+  <div class="actions" action="/business_edit",method="POST">
+    <%= form.submit %>
+  </div>
+<% end %>
+</center>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<li style="float: right;"><%= link_to "Return to shop", '/medical' %></li>
+
+<h1>Businesses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer ID</th>
+      <th>Address</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @businesses.each do |business| %>
+      <tr>
+        <td><%= business.customer_id %></td>
+        <td><%= business.address %></td>
+        <td><%= business.status %></td>
+        <% session[:business_id]=business.id %>
+        <td><%= link_to 'View',show1_url(business) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

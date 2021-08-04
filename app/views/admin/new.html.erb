@@ -1,0 +1,12 @@
+<li style="float: right;"><%= link_to "Home", '/' %></li>
+
+<center>
+<form action="/login" method="POST">
+	<h1>Login</h1>
+	<input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
+	<input type="string" name="login[name]" placeholder="Name"><br>
+	<input type="password" name="login[password]" placeholder="Password"><br>
+	<input type="submit" name="submit" class="submit">
+	
+
+</form>

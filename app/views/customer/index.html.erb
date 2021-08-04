@@ -1,0 +1,12 @@
+<li style="float: right;"><%= link_to "Home", '/' %></li>
+<h1>Customer</h1>
+<center>
+<form action="/session2" method="POST">
+	<h1>Login</h1>
+	<input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
+	<input type="email" name="login[email]" placeholder="email"><br>
+	<input type="password" name="login[password]" placeholder="password"><br>
+	<input type="submit" name="submit" class="submit">
+	<li style="float:right;"><%= link_to "New User", '/customer_reg' %></li>
+</form>
+</center>

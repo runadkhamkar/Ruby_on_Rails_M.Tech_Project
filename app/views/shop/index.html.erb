@@ -1,0 +1,14 @@
+<h1>Medical Shop</h1>
+<li style="float: right;"><%= link_to 'Back', '/' %></li>
+
+<center>
+<form action="/session" method="POST">
+	<h1>Login</h1>
+	<input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
+	<input type="email" name="login[email]" placeholder="email"><br>
+	<input type="password" name="login[password]" placeholder="password"><br>
+	<input type="submit" name="submit" class="submit">
+	<li style="float:right;"><%= link_to "New Shop", '/shop_reg' %></li>
+
+</form>
+</center>

@@ -1,0 +1,20 @@
+
+<center>
+<%= form_with(model: list, local: true,url:'/updatelist',method: :post)  do |form| %>
+  <h1>Editing List</h1>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <% session[:list_id]=session[:list_id] %>
+  <div class="actions" action='/updatelist' method='POST'>
+    <%= form.submit %>
+  </div>
+<% end %>
+</center>
